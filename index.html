@@ -245,14 +245,14 @@
                                 <li>IUPAC: <span class="highlight">4-[5-[2,2-dimethyl-4-(4-methylphenyl)chromen-6-yl]-1H-pyrrol-2-yl]benzoic acid</span></li>
                                 <li>Molecular weight: <span class="highlight">435.5 g/mol</span>, LogP: <span class="highlight">5.706</span></li>
                                 <li>Rigid fused-ring system enhances <span class="highlight">RARα selectivity</span> (K<sub>i</sub> = 1.5 nM vs. 898 nM for RARβ)</li>
-                                <li>Stabilizes RARα in inactive conformation, preventing <span class="highlight">coactivator recruitment</span></li>
-                                <li>Promotes <span class="highlight">NCOR1/NCOR2</span> association and maintains <span class="highlight">histone deacetylation</span></li>
+                                <li>Locks Helix 12 in inactive conformation, maintaining <span class="highlight">corepressor binding</span></li>
+                                <li>Disrupts retinoic acid signaling pathway, preventing <span class="highlight">chromatin remodeling</span> required for spermatogenesis</li>
                             </ul>
                             <div class="data-point">
                                 <span class="data-label">Binding Affinity:</span>
                                 <span class="data-value">K<sub>i</sub> = 1.5 nM (RARα)</span>
                             </div>
-                            <button class="btn primary-btn modal-trigger" data-modal="structure-modal">View Molecular Structure</button>
+                            <button class="btn primary-btn modal-trigger" data-modal="structure-modal">View Mechanism of Action</button>
                         </div>
                     </div>
                     
@@ -451,7 +451,7 @@
             <div class="modal" id="structure-modal">
                 <div class="modal-content">
                     <span class="close-button">&times;</span>
-                    <h2>Molecular Structure and Binding Mechanism</h2>
+                    <h2>Molecular Structure and Antagonist Mechanism</h2>
                     <div class="modal-body">
                         <div class="structure-comparison">
                             <div class="structure-item">
@@ -461,17 +461,31 @@
                             </div>
                         </div>
                         
-                        <h3>Structural Features Enhancing Selectivity:</h3>
-                        <ul class="feature-list">
-                            <li><strong>Chromene Core:</strong> Provides molecular rigidity and hydrophobic interactions</li>
-                            <li><strong>Pyrrole Linker:</strong> Enables π-π stacking with aromatic residues in the binding pocket</li>
-                            <li><strong>Benzoic Acid Moiety:</strong> Forms critical hydrogen bonds with Ser232 in RARα</li>
-                            <li><strong>2,2-Dimethyl Groups:</strong> Enhance metabolic stability and prevent oxidation</li>
-                            <li><strong>4-Methylphenyl Substituent:</strong> Occupies hydrophobic pocket, improving binding affinity</li>
-                        </ul>
+                        <h3>Signaling Pathway Mechanism:</h3>
+                        <img src="img/mechanism.png" alt="YCT-529 Mechanism of Action Pathway" class="modal-image mechanism-diagram">
+                        <p class="mechanism-caption">Comparison of retinoic acid signaling pathways when YCT-529 is absent (left) versus present (right). YCT-529 competes with RA for RARα binding, locks helix 12 in the inactive conformation, maintains corepressor binding, and ultimately inhibits spermatogenesis.</p>
                         
-                        <h3>Structural Basis for RARα Selectivity:</h3>
-                        <p>YCT-529's high selectivity for RARα (K<sub>i</sub> = 1.5 nM) over RARβ (K<sub>i</sub> = 898 nM) and RARγ (K<sub>i</sub> = 10,618 nM) is primarily due to the unique Ser232 residue in RARα's ligand-binding domain. This residue, replaced by Ala225 in RARβ and Ala234 in RARγ, creates a polar interaction site that stabilizes YCT-529's binding. The benzoic acid moiety forms specific hydrogen bonds with this residue, while the rigid fused-ring system ensures optimal positioning for these interactions.</p>
+                        <h3>Structural Features and RARα Selectivity:</h3>
+                        <div class="two-column-list">
+                            <ul class="feature-list">
+                                <li><strong>Chromene Core:</strong> Provides molecular rigidity and hydrophobic interactions</li>
+                                <li><strong>Pyrrole Linker:</strong> Enables π-π stacking with aromatic residues in the binding pocket</li>
+                                <li><strong>Benzoic Acid Moiety:</strong> Forms critical hydrogen bonds with Ser232 in RARα</li>
+                            </ul>
+                            <ul class="feature-list">
+                                <li><strong>2,2-Dimethyl Groups:</strong> Enhance metabolic stability and prevent oxidation</li>
+                                <li><strong>4-Methylphenyl Substituent:</strong> Occupies hydrophobic pocket, improving binding affinity</li>
+                                <li><strong>Ser232 Interaction:</strong> Key to selectivity over RARβ (K<sub>i</sub> = 1.5 vs 898 nM)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="key-finding-box">
+                            <div class="key-finding-header">
+                                <i class="fas fa-lightbulb"></i>
+                                <h4>Mechanism of Selectivity</h4>
+                            </div>
+                            <p>YCT-529's high selectivity for RARα is primarily due to the unique Ser232 residue in RARα's ligand-binding domain. This residue, replaced by Ala225 in RARβ and Ala234 in RARγ, creates a polar interaction site that stabilizes binding. This selective binding mechanism allows YCT-529 to specifically target spermatogenesis without affecting other retinoic acid pathways.</p>
+                        </div>
                     </div>
                 </div>
             </div>
