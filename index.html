@@ -114,7 +114,7 @@
             <div class="container">
                 <div class="executive-header">
                     <h2>Executive Summary</h2>
-                    <p class="executive-tagline">YCT-529: A non-hormonal approach to male contraception</p>
+                    <!-- p class="executive-tagline">YCT-529: A non-hormonal approach to male contraception</p-->
                 </div>
                 
                 <div class="executive-grid">
@@ -140,11 +140,11 @@
                     
                     <div class="executive-card">
                         <div class="card-number">03</div>
-                        <h3>Research Approach</h3>
-                        <p>A comprehensive study combining literature review and advanced pharmacokinetic modeling across diverse populations.</p>
+                        <h3>Research & Findings</h3>
+                        <p>PBPK modeling using PK-Sim revealed population-specific pharmacokinetics and demonstrated how dietary conditions significantly impact YCT-529 absorption.</p>
                         <div class="stat-highlight">
-                            <span class="stat-number">16K</span>
-                            <span class="stat-label">Virtual participants in PK simulations</span>
+                            <span class="stat-number">~1.7x</span>
+                            <span class="stat-label">Higher drug exposure in East Asians vs. Black Americans</span>
                         </div>
                     </div>
                 </div>
@@ -173,14 +173,28 @@
                     </div>
                 </div>
                 
-                <div class="molecule-visualization">
-                    <img src="img/molecule-structure.png" alt="YCT-529 Molecular Structure" class="molecule-image">
-                    <div class="molecule-caption">
-                        <h4>YCT-529 Molecular Structure</h4>
-                        <p>4-[5-[2,2-dimethyl-4-(4-methylphenyl)chromen-6-yl]-1H-pyrrol-2-yl]benzoic acid</p>
+                <!-- Compact Molecule Details Card HTML -->
+                <div class="molecule-card">
+                    <div class="molecule-card-content">
+                    <div class="molecule-image">
+                        <img src="img/molecule-structure.png" alt="YCT-529 Molecular Structure">
                     </div>
-                </div>
-            </div>
+                    <div class="molecule-details">
+                        <h3>YCT-529 Molecular Structure</h3>
+                        <p class="molecule-iupac">4-[5-[2,2-dimethyl-4-(4-methylphenyl)chromen-6-yl]-1H-pyrrol-2-yl]benzoic acid</p>
+                        <div class="molecule-properties">
+                        <div class="property">
+                            <span class="property-label">MW:</span>
+                            <span class="property-value">435.5 g/mol</span>
+                        </div>
+                        <div class="property">
+                            <span class="property-label">LogP:</span>
+                            <span class="property-value">5.71</span>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>  
         </section>
         
         <div class="section-divider"></div>
@@ -445,15 +459,6 @@
                                 <img src="img/molecule-structure.png" alt="YCT-529 Molecular Structure" class="modal-image">
                                 <p>4-[5-[2,2-dimethyl-4-(4-methylphenyl)chromen-6-yl]-1H-pyrrol-2-yl]benzoic acid</p>
                             </div>
-                            <div class="structure-item">
-                                <h3>RARα Binding Pocket Interaction</h3>
-                                <!-- Replaced with text description since binding-pocket.png is missing -->
-                                <div class="placeholder-image">
-                                    <i class="fas fa-microscope fa-4x"></i>
-                                    <p>Binding pocket visualization</p>
-                                </div>
-                                <p>YCT-529 in the RARα ligand-binding domain, showing key interactions with Ser232 and other residues</p>
-                            </div>
                         </div>
                         
                         <h3>Structural Features Enhancing Selectivity:</h3>
@@ -536,16 +541,8 @@
                     <div class="modal-body">
                         <div class="efficacy-images">
                             <div class="efficacy-image">
-                                <img src="img/histology.png" alt="Testicular Histology" class="modal-image">
-                                <p>Testicular histology showing disrupted spermatogenesis after YCT-529 treatment</p>
-                            </div>
-                            <div class="efficacy-image">
-                                <!-- Replaced with text description since sperm-count.png is missing -->
-                                <div class="placeholder-image">
-                                    <i class="fas fa-chart-bar fa-4x"></i>
-                                    <p>Sperm count visualization</p>
-                                </div>
-                                <p>Dose-dependent reduction in sperm count with YCT-529 treatment</p>
+                                <img src="img/histology.png?v=2" alt="Testicular Histology" class="modal-image">
+                                <p>Testicular histology showing disrupted spermatogenesis after RAR antagonist treatment</p>
                             </div>
                         </div>
                         
@@ -729,49 +726,131 @@
                     </div>
                 </div>
                 
+                <!-- Redesigned Research Visuals Section -->
                 <div class="research-visuals">
                     <h3 class="visuals-title"><i class="fas fa-chart-area"></i> Data Visualization</h3>
                     
-                    <div class="visuals-grid">
+                    <div class="visuals-compact-grid">
                         <!-- Plasma Concentration Card -->
-                        <div class="visual-card">
-                            <div class="visual-header">
+                        <div class="visual-compact-card">
+                            <div class="visual-compact-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="visual-compact-content">
                                 <h4>Plasma Concentration Profiles</h4>
-                                <span class="visual-badge">Figure 3</span>
-                            </div>
-                            <div class="visual-image">
-                                <img src="img/figures/plasma-concentration.png" alt="Plasma Concentration Profiles">
-                                <div class="zoom-overlay">
-                                    <i class="fas fa-search-plus"></i>
-                                </div>
-                            </div>
-                            <div class="visual-caption">
-                                <p>Plasma concentration-time profiles for YCT-529 at multiple doses across populations. East Asian participants exhibit the highest Cmax, indicating potential metabolic differences affecting clearance.</p>
-                                <div class="key-insight">
-                                    <i class="fas fa-info-circle"></i>
-                                    <span>CYP3A4 expression varies by 40% across ethnic groups</span>
-                                </div>
+                                <p>Comparison of YCT-529 pharmacokinetics across ethnic populations</p>
+                                <button class="btn primary-btn modal-trigger" data-modal="plasma-modal">View Data</button>
                             </div>
                         </div>
                         
                         <!-- Dietary Effects Card -->
-                        <div class="visual-card">
-                            <div class="visual-header">
-                                <h4>Dietary Effects on Pharmacokinetics</h4>
-                                <span class="visual-badge">Figure 5</span>
+                        <div class="visual-compact-card">
+                            <div class="visual-compact-icon">
+                                <i class="fas fa-utensils"></i>
                             </div>
-                            <div class="visual-image">
-                                <img src="img/figures/dietary-effects.png" alt="Dietary Effects on Pharmacokinetics">
-                                <div class="zoom-overlay">
-                                    <i class="fas fa-search-plus"></i>
-                                </div>
+                            <div class="visual-compact-content">
+                                <h4>Dietary Effects</h4>
+                                <p>Impact of food intake on YCT-529 absorption and bioavailability</p>
+                                <button class="btn primary-btn modal-trigger" data-modal="dietary-modal">View Data</button>
                             </div>
-                            <div class="visual-caption">
-                                <p>Impact of dietary conditions on YCT-529 pharmacokinetics. Fasting results in higher peak concentrations compared to fed states.</p>
-                                <div class="key-insight">
-                                    <i class="fas fa-info-circle"></i>
-                                    <span>45% reduction in Cmax with high-fat meal</span>
+                        </div>
+                        
+                        <!-- Atazanavir Comparison Card -->
+                        <div class="visual-compact-card">
+                            <div class="visual-compact-icon">
+                                <i class="fas fa-exchange-alt"></i>
+                            </div>
+                            <div class="visual-compact-content">
+                                <h4>Drug Comparison</h4>
+                                <p>YCT-529 vs. Atazanavir pharmacokinetic profiles and validation</p>
+                                <button class="btn primary-btn modal-trigger" data-modal="comparison-modal">View Data</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Plasma Concentration Modal -->
+                <div class="modal" id="plasma-modal">
+                    <div class="modal-content">
+                        <span class="close-button">&times;</span>
+                        <h2>Plasma Concentration Profiles</h2>
+                        <div class="modal-body">
+                            <div class="visualization-image">
+                                <img src="img/figures/plasma-concentration.png" alt="Plasma Concentration Profiles" class="modal-image">
+                            </div>
+                            
+                            <h3>Key Observations</h3>
+                            <ul class="observation-list">
+                                <li><strong>East Asian Subjects:</strong> Exhibited highest plasma concentrations (Cmax ~500 μg/L at 180 mg dose)</li>
+                                <li><strong>Black American Subjects:</strong> Showed lowest systemic exposure (Cmax ~300 μg/L at same dose)</li>
+                                <li><strong>Caucasian Subjects:</strong> Demonstrated intermediate values between the other populations</li>
+                                <li><strong>Linear Pharmacokinetics:</strong> Dose-proportional increases in AUC and Cmax across all populations</li>
+                            </ul>
+                            
+                            <div class="key-finding-box">
+                                <div class="key-finding-header">
+                                    <i class="fas fa-lightbulb"></i>
+                                    <h4>Clinical Significance</h4>
                                 </div>
+                                <p>The 40% variation in CYP3A4 expression across ethnic groups appears to directly correlate with observed differences in drug metabolism. This suggests personalized dosing strategies may be necessary for optimal efficacy and safety.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dietary Effects Modal -->
+                <div class="modal" id="dietary-modal">
+                    <div class="modal-content">
+                        <span class="close-button">&times;</span>
+                        <h2>Dietary Effects on Pharmacokinetics</h2>
+                        <div class="modal-body">
+                            <div class="visualization-image">
+                                <img src="img/figures/dietary-effects.png" alt="Dietary Effects on Pharmacokinetics" class="modal-image">
+                            </div>
+                            
+                            <h3>Key Observations</h3>
+                            <ul class="observation-list">
+                                <li><strong>Fasting Condition:</strong> Highest peak concentration (Cmax ~100 μg/L) and more rapid absorption</li>
+                                <li><strong>High-Fat Meal:</strong> 45% reduction in Cmax (~55 μg/L) with delayed Tmax</li>
+                                <li><strong>Light Meal:</strong> Intermediate effect with ~25% reduction in peak concentration</li>
+                                <li><strong>AUC Differences:</strong> Total exposure (AUC) varied less dramatically than Cmax across conditions</li>
+                            </ul>
+                            
+                            <div class="key-finding-box">
+                                <div class="key-finding-header">
+                                    <i class="fas fa-lightbulb"></i>
+                                    <h4>Clinical Implications</h4>
+                                </div>
+                                <p>Food significantly affects the rate and extent of YCT-529 absorption. For consistent drug exposure, administration timing relative to meals should be standardized. Morning administration in a fasting state may provide optimal and consistent drug levels.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Atazanavir Comparison Modal -->
+                <div class="modal" id="comparison-modal">
+                    <div class="modal-content">
+                        <span class="close-button">&times;</span>
+                        <h2>Comparison of YCT-529, MCC Placebo, and Atazanavir</h2>
+                        <div class="modal-body">
+                            <div class="visualization-image">
+                                <img src="img/atazanavir.png" alt="Comparison of YCT-529, MCC Placebo, and Atazanavir" class="modal-image">
+                            </div>
+                            
+                            <h3>Key Observations</h3>
+                            <ul class="observation-list">
+                                <li><strong>Atazanavir:</strong> Shows high peak concentration (Cmax ~2473.4 μg/L) with rapid clearance</li>
+                                <li><strong>YCT-529:</strong> Demonstrates moderate peak (Cmax ~162.2 μg/L) with sustained plasma levels</li>
+                                <li><strong>MCC Placebo:</strong> Minimal systemic absorption (Cmax ~4.5 μg/L), serving as negative control</li>
+                                <li><strong>Model Validation:</strong> Simulated atazanavir pharmacokinetics (green line) closely match clinical data points (black dots), confirming model accuracy</li>
+                            </ul>
+                            
+                            <div class="key-finding-box">
+                                <div class="key-finding-header">
+                                    <i class="fas fa-lightbulb"></i>
+                                    <h4>Significance for YCT-529 Development</h4>
+                                </div>
+                                <p>The close alignment between simulated and clinical atazanavir data validates our PBPK modeling approach. This increases confidence in YCT-529 predictions and suggests our simulation parameters accurately reflect in vivo drug behavior, supporting advancement to clinical trials.</p>
                             </div>
                         </div>
                     </div>
@@ -802,7 +881,7 @@
                                 <i class="fas fa-vial"></i>
                             </div>
                             <h4>Clinical Trial Design</h4>
-                            <p>Stratification by ethnicity and standardization of meal timing should be incorporated into future clinical trials.</p>
+                            <p>Stratification by ethnicity and standardization of meal timing are suggested to be incorporated into future clinical trials.</p>
                         </div>
                     </div>
                 </div>
@@ -812,6 +891,32 @@
                         <span>Read Full Research Paper</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
+                </div>
+            </div>
+
+            <!-- Methodology Modal -->
+            <div class="modal" id="methodology-modal">
+                <div class="modal-content">
+                    <span class="close-button">&times;</span>
+                    <h2>Detailed Methodology Workflow</h2>
+                    <div class="modal-body">
+                        <div class="methodology-diagram">
+                            <img src="img/methodology.png" alt="Methodology Workflow" class="modal-image">
+                        </div>
+                        
+                        <h3>Computational Workflow Steps:</h3>
+                        <ol class="workflow-steps">
+                            <li><strong>SMILES String Generation:</strong> Encoded YCT-529's molecular structure in SMILES format for computational analysis</li>
+                            <li><strong>Physicochemical Prediction:</strong> Used ADMETLab 3.0 to predict absorption, distribution, metabolism, excretion properties</li>
+                            <li><strong>PK-Sim Modeling:</strong> Created physiologically-based pharmacokinetic models incorporating predicted parameters</li>
+                            <li><strong>Population Simulation:</strong> Generated synthetic populations representing different ethnicities and dietary conditions</li>
+                            <li><strong>Data Processing:</strong> Analyzed simulation outputs across 16,000 virtual participants</li>
+                            <li><strong>Validation:</strong> Compared predicted values with known pharmacokinetic profiles of reference compounds</li>
+                            <li><strong>Clinical Recommendations:</strong> Developed potential dosing strategies based on population differences</li>
+                        </ol>
+                        
+                        <p class="modal-note">This computational approach allowed us to predict how YCT-529 would behave across different populations and under various dietary conditions without requiring extensive clinical trials, providing a foundation for future human studies.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -901,90 +1006,125 @@
 
         <div class="section-divider"></div>
 
-        <!-- Improved About the Project Section -->
+        <!-- Redesigned About the Project Section -->
         <section id="about" class="section">
             <div class="container">
                 <h2 class="section-title">About the Project</h2>
                 
-                <div class="about-grid">
-                    <!-- Author Card -->
-                    <div class="about-card">
-                        <div class="card-icon">
-                            <i class="fas fa-user-graduate"></i>
+                <!-- Author and Project Info Card -->
+                <div class="info-card">
+                    <div class="info-grid">
+                        <!-- Author info -->
+                        <div class="info-column author-column">
+                            <div class="info-icon">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <h3 class="info-title">Author</h3>
+                            <div class="info-content">
+                                <h4 class="author-name">Praise Ogwuche</h4>
+                                <p class="author-detail">Minerva University</p>
+                                <p class="author-detail">Class of 2025</p>
+                            </div>
                         </div>
-                        <h3>Author</h3>
-                        <div class="author-info">
-                            <h4 class="author-name">Praise Ogwuche</h4>
-                            <p>Minerva University</p>
-                            <p>Class of 2025</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Capstone Project Card -->
-                    <div class="about-card">
-                        <div class="card-icon">
-                            <i class="fas fa-book"></i>
-                        </div>
-                        <h3>Capstone Project</h3>
-                        <div class="project-info">
-                            <p>This project represents the culmination of my undergraduate studies at Minerva University.</p>
-                            <div class="completion-date">
-                                <i class="fas fa-calendar-check"></i>
-                                <span>Completed April 2025</span>
+                        
+                        <!-- Project description -->
+                        <div class="info-column project-column">
+                            <div class="info-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <h3 class="info-title">Capstone Project</h3>
+                            <div class="info-content">
+                                <p class="project-desc">This project represents the culmination of my undergraduate studies at Minerva University, focused on advancing male contraception through non-hormonal approaches.</p>
+                                <div class="project-date">
+                                    <i class="fas fa-calendar-check"></i>
+                                    <span>Completed April 2025</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- Resources Card -->
-                    <div class="about-card">
-                        <div class="card-icon">
+                </div>
+                
+                <!-- Resources Card -->
+                <div class="resources-card">
+                    <div class="resources-header">
+                        <div class="info-icon">
                             <i class="fas fa-link"></i>
                         </div>
-                        <h3>Resources</h3>
-                        <div class="resources-links">
+                        <h3 class="info-title">Project Resources</h3>
+                    </div>
+                    
+                    <div class="resources-grid">
+                        <!-- Code -->
+                        <div class="resource-group">
+                            <h4 class="resource-group-title"><i class="fas fa-code"></i> Code</h4>
                             <a href="https://github.com/PraiseOgwuche/YCT-529_WEB" target="_blank" class="resource-link">
                                 <i class="fab fa-github"></i>
                                 <span>GitHub Repository</span>
                             </a>
+                            <a href="https://github.com/PraiseOgwuche/YCT-529_web" target="_blank" class="resource-link">
+                                <i class="fab fa-github"></i>
+                                <span>Project Website Repository</span>
+                            </a>
+                        </div>
+                        
+                        <!-- Documents -->
+                        <div class="resource-group">
+                            <h4 class="resource-group-title"><i class="fas fa-file-pdf"></i> Documents</h4>
                             <a href="pdfs/Capstone Project Executive Summary.pdf" target="_blank" class="resource-link">
                                 <i class="fas fa-file-pdf"></i>
                                 <span>Executive Summary</span>
                             </a>
                             <a href="pdfs/Final Literature Review Capstone.pdf" target="_blank" class="resource-link">
                                 <i class="fas fa-file-pdf"></i>
-                                <span>Literature Review PDF</span>
-                            </a>
-                            <a href="https://medium.com/@praiseogwuche/unlocking-male-contraception-the-science-behind-yct-529-and-retinoic-acid-signaling-441b18e18552" target="_blank" class="resource-link">
-                                <i class="fab fa-medium"></i>
-                                <span>Literature Review on Medium</span>
+                                <span>Literature Review</span>
                             </a>
                             <a href="pdfs/Final Research Capstone.pdf" target="_blank" class="resource-link">
                                 <i class="fas fa-file-pdf"></i>
-                                <span>Research Paper PDF</span>
+                                <span>Research Paper</span>
+                            </a>
+                        </div>
+                        
+                        <!-- Medium Articles -->
+                        <div class="resource-group">
+                            <h4 class="resource-group-title"><i class="fab fa-medium"></i> Medium Articles</h4>
+                            <a href="https://medium.com/@praiseogwuche/unlocking-male-contraception-the-science-behind-yct-529-and-retinoic-acid-signaling-441b18e18552" target="_blank" class="resource-link">
+                                <i class="fab fa-medium"></i>
+                                <span>Literature Review on Medium</span>
                             </a>
                             <a href="https://medium.com/@praiseogwuche/the-science-of-a-male-birth-control-pill-a-deep-dive-into-yct-529s-pharmacokinetics-b148930022ad" target="_blank" class="resource-link">
                                 <i class="fab fa-medium"></i>
                                 <span>Research Paper on Medium</span>
                             </a>
+                        </div>
+                        
+                        <!-- Appendices -->
+                        <div class="resource-group">
+                            <h4 class="resource-group-title"><i class="fas fa-file-alt"></i> Appendices</h4>
                             <a href="pdfs/Research Appendices.pdf" target="_blank" class="resource-link">
                                 <i class="fas fa-file-alt"></i>
                                 <span>Research Appendices</span>
+                            </a>
+                            <a href="https://drive.google.com/file/d/1dr4vd9vBuHmVWvFUjq8-IlXdgabZoJgy/view?usp=drive_link" target="_blank" class="resource-link">
+                                <i class="fas fa-file-download"></i>
+                                <span>Review Appendices</span>
                             </a>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Acknowledgments Section -->
-                <div class="acknowledgments">
-                    <div class="acknowledgments-card">
-                        <h3><i class="fas fa-award"></i> Acknowledgments</h3>
+                <!-- Acknowledgments Card -->
+                <div class="acknowledgments-compact">
+                    <div class="acknowledgments-header">
+                        <i class="fas fa-award"></i>
+                        <h3>Acknowledgments</h3>
+                    </div>
+                    <div class="acknowledgments-content">
                         <p>I would like to thank Professor Stan for their guidance and mentorship throughout this project. Additionally, I appreciate the support from Minerva University and all those who provided feedback and assistance.</p>
                         <p>Special thanks to the research community advancing male contraception and contributing to reproductive health equity.</p>
                     </div>
                 </div>
             </div>
         </section>
-    </main>
 
     <!-- Modal components -->
     <div class="modal" id="structure-modal">

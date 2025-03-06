@@ -2,10 +2,10 @@
 :root {
     --primary: #1a56db;
     --primary-dark: #1e429f;
-    --secondary: #7e3af2;
-    --secondary-dark: #6c2bd9;
-    --accent: #0e9f6e;
-    --accent-dark: #0b815a;
+    --secondary: #1a56db;
+    --secondary-dark: #1e429f;
+    --accent: #1a56db;
+    --accent-dark: #1e429f;
     --light: #f9fafb;
     --dark: #374151;
     --paper: #ffffff;
@@ -97,24 +97,31 @@ a:hover {
     margin-top: 1.5rem;
 }
 
-/* Header Styles */
+/* Header Styles - Fixed Version */
+
 .modern-header {
     position: relative;
-    background: linear-gradient(135deg, #1a56db 0%, #4a7bf8 100%);
-    color: white;
-    padding: 6rem 0 5rem;
-    text-align: center;
+    padding: 4rem 0;
     overflow: hidden;
+    background: none; /* Remove any existing background */
 }
 
 .header-background {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(rgba(25, 89, 227, 0.9), rgba(0, 0, 0, 0.5)),
+                url('/img/molecule-structure.png');
+    background-size: auto 300%;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Apply a subtle sharpening filter */
+    filter: contrast(1.05);
 }
+
 
 .animated-wave {
     position: absolute;
@@ -166,7 +173,7 @@ a:hover {
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
     letter-spacing: -0.5px;
     color: white;
 }
@@ -197,6 +204,9 @@ a:hover {
     font-weight: 300;
     margin-bottom: 1.5rem;
     opacity: 0.9;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
 }
 
 .header-badges {
@@ -206,16 +216,17 @@ a:hover {
     gap: 1rem;
 }
 
-.badge {
+.header-badges .badge {
     display: flex;
     align-items: center;
     padding: 0.5rem 1rem;
     background-color: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
     border-radius: 30px;
     font-size: 0.875rem;
     font-weight: 500;
     transition: all 0.3s ease;
+    color: white;
 }
 
 .badge:hover {
@@ -228,6 +239,20 @@ a:hover {
     font-size: 0.875rem;
 }
 
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2.25rem;
+    }
+    
+    .subtitle {
+        font-size: 1.25rem;
+    }
+    
+    .badge {
+        font-size: 0.75rem;
+    }
+}
 /* Modern Navigation Styling */
 .modern-nav {
     background-color: white;
@@ -356,7 +381,7 @@ a:hover {
     text-align: center;
     font-size: 2.25rem;
     font-weight: 700;
-    margin-bottom: 0.5rem;
+    margin-bottom: 2rem;
     color: var(--dark);
     position: relative;
 }
@@ -433,10 +458,10 @@ a:hover {
 .card-number {
     position: absolute;
     top: -10px;
-    right: -10px;
+    right: 5px;
     font-size: 4rem;
     font-weight: 700;
-    color: rgba(26, 86, 219, 0.05);
+    color: rgba(26, 86, 219, 0.3);
     z-index: 1;
 }
 
@@ -573,17 +598,20 @@ a:hover {
 }
 
 /* Enhanced Literature Review Styling */
-.scientific-subtitle {
-    text-align: center;
-    font-size: 1.1rem;
-    margin-bottom: 3rem;
-    color: var(--dark);
-    opacity: 0.8;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2rem;
+#literature .section-title {
+    margin-bottom: 2.5rem;
 }
+
+.scientific-subtitle {
+    margin-top: 0;
+    margin-bottom: 2.5rem;
+    color: #64748b;
+    font-size: 1.1rem;
+    text-align: center;
+    font-weight: 400;
+    padding: 0 1rem;
+}
+
 
 .scientific-grid {
     display: grid;
@@ -610,7 +638,7 @@ a:hover {
 
 .card-header {
     padding: 1.25rem 1.5rem;
-    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    background: #1a56db;
     color: white;
     display: flex;
     align-items: center;
@@ -792,10 +820,10 @@ a:hover {
 
 .abstract-container {
     background-color: var(--paper);
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border-radius: 1px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     padding: 2rem;
-    max-width: 900px;
+    max-width: 1500px;
     margin: 0 auto;
 }
 
@@ -808,10 +836,11 @@ a:hover {
 
 .abstract-caption {
     text-align: center;
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: #6b7280;
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
+    line-height: 1.6;
 }
 
 .comparison-section {
@@ -861,6 +890,20 @@ a:hover {
 }
 
 /* Research Paper Section Styling */
+#research .section-title {
+    margin-bottom: 1.5rem;
+}
+
+#research .scientific-subtitle {
+    margin-top: 0;
+    margin-bottom: 2.5rem;
+    color: #64748b;
+    font-size: 1.1rem;
+    text-align: center;
+    font-weight: 400;
+    padding: 0 1rem;
+}
+
 .two-column {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1607,7 +1650,7 @@ footer {
 }
 
 .card-header {
-    background: linear-gradient(135deg, #4357ad, #2563eb);
+    background: #1c52c0;
     color: white;
     padding: 1.5rem;
     border-radius: 12px 12px 0 0;
@@ -1939,7 +1982,7 @@ footer {
 .research-btn {
     display: inline-flex;
     align-items: center;
-    background: linear-gradient(135deg, #4357ad, #2563eb);
+    background: linear-gradient(135deg, #1a56db, #1e429f);
     color: white;
     padding: 0.75rem 1.5rem;
     border-radius: 8px;
@@ -2232,3 +2275,490 @@ footer {
             gap: 1.5rem;
         }
     }
+
+    .molecule-card {
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        margin: 2.5rem auto;
+        max-width: 800px;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      
+      .molecule-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+      }
+      
+      .molecule-card-content {
+        display: flex;
+        align-items: center;
+        padding: 1.5rem;
+      }
+      
+      .molecule-image {
+        flex: 0 0 400px;
+        margin-right: 1.5rem;
+      }
+      
+      .molecule-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 6px;
+        background-color: #f8f9fa;
+        padding: 10px;
+      }
+      
+      .molecule-details {
+        flex: 1;
+      }
+      
+      .molecule-details h3 {
+        font-size: 1.25rem;
+        margin: 0 0 0.75rem 0;
+        color: #1e293b;
+        position: relative;
+        padding-bottom: 0.5rem;
+      }
+      
+      .molecule-details h3:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 40px;
+        height: 3px;
+        background-color: #2563eb;
+        border-radius: 3px;
+      }
+      
+      .molecule-iupac {
+        font-size: 0.9rem;
+        color: #64748b;
+        margin-bottom: 1rem;
+        line-height: 1.5;
+      }
+      
+      .molecule-properties {
+        display: flex;
+        gap: 1.5rem;
+      }
+      
+      .property {
+        display: flex;
+        align-items: center;
+        background-color: #f8fafc;
+        padding: 0.5rem 0.75rem;
+        border-radius: 6px;
+        font-size: 0.875rem;
+      }
+      
+      .property-label {
+        font-weight: 600;
+        color: #2563eb;
+        margin-right: 0.5rem;
+      }
+      
+      .property-value {
+        color: #334155;
+      }
+      
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        .molecule-card-content {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        
+        .molecule-image {
+          margin-right: 0;
+          margin-bottom: 1.5rem;
+          width: 150px;
+        }
+      }
+
+      .methodology-diagram {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    
+    .methodology-diagram img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .workflow-steps {
+        margin-bottom: 1.5rem;
+    }
+    
+    .workflow-steps li {
+        margin-bottom: 0.75rem;
+        line-height: 1.5;
+    }
+    
+    .workflow-steps strong {
+        color: var(--primary);
+    }
+    /* Compact Visualization Cards */
+.visuals-compact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.visual-compact-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.visual-compact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.visual-compact-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.visual-compact-content h4 {
+    margin: 0 0 0.75rem 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.visual-compact-content p {
+    margin: 0 0 1.25rem 0;
+    font-size: 0.9rem;
+    color: #64748b;
+    line-height: 1.5;
+}
+
+/* Modal Visualization Content */
+.visualization-image {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.visualization-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.observation-list {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+.observation-list li {
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
+}
+
+.observation-list strong {
+    color: var(--primary);
+}
+
+.key-finding-box {
+    background-color: #f0f7ff;
+    border-radius: 8px;
+    padding: 1.25rem;
+    margin-top: 1.5rem;
+    border-left: 4px solid var(--primary);
+}
+
+.key-finding-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.key-finding-header i {
+    color: var(--primary);
+    font-size: 1.25rem;
+    margin-right: 0.75rem;
+}
+
+.key-finding-header h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.key-finding-box p {
+    margin: 0;
+    color: #334155;
+    line-height: 1.6;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 992px) {
+    .visuals-compact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .visuals-compact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.visuals-title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #1e293b;
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: block; /* Changed from flex to block */
+}
+
+.visuals-title i {
+    margin-right: 0.5rem;
+    color: #2563eb;
+}
+/* About Section Redesign */
+.info-card, .resources-card, .acknowledgments-compact {
+    margin-top: 1rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+/* Author and Project Info */
+.info-grid {
+    display: grid;
+    grid-template-columns: minmax(auto, 350px) 1fr;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.info-column {
+    padding: 1.75rem;
+    position: relative;
+}
+
+.author-column {
+    border-right: 1px solid #f1f5f9;
+}
+
+.info-icon {
+    width: 50px;
+    height: 50px;
+    background-color: #f0f7ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2563eb;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.info-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0 0 1rem 0;
+    color: #1e293b;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.info-title:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background-color: #2563eb;
+    border-radius: 3px;
+}
+
+.author-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+    color: #334155;
+}
+
+.author-detail {
+    margin: 0.25rem 0;
+    color: #64748b;
+}
+
+.project-desc {
+    color: #334155;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.project-date {
+    display: flex;
+    align-items: center;
+    color: #64748b;
+    font-size: 0.95rem;
+}
+
+.project-date i {
+    margin-right: 0.5rem;
+    color: #2563eb;
+}
+
+/* Resources Card */
+.resources-header {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.resources-header .info-icon {
+    margin: 0 1rem 0 0;
+}
+
+.resources-header .info-title {
+    margin: 0;
+    padding: 0;
+}
+
+.resources-header .info-title:after {
+    display: none;
+}
+
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0.5rem;
+}
+
+.resource-group {
+    padding: 1rem;
+}
+
+.resource-group-title {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.resource-group-title i {
+    margin-right: 0.5rem;
+    color: #2563eb;
+}
+
+.resource-link {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0;
+    color: #334155;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.resource-link:hover {
+    color: #2563eb;
+    transform: translateX(3px);
+}
+
+.resource-link i {
+    width: 20px;
+    margin-right: 0.75rem;
+    color: #2563eb;
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* Acknowledgments */
+.acknowledgments-compact {
+    padding: 1.5rem;
+}
+
+.acknowledgments-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.acknowledgments-header i {
+    color: #2563eb;
+    font-size: 1.25rem;
+    margin-right: 0.75rem;
+}
+
+.acknowledgments-header h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+    color: #1e293b;
+}
+
+.acknowledgments-content p {
+    color: #334155;
+    line-height: 1.7;
+    margin: 0 0 1rem 0;
+}
+
+.acknowledgments-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Responsive Layouts */
+@media (max-width: 992px) {
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .author-column {
+        border-right: none;
+        border-bottom: 1px solid #f1f5f9;
+    }
+    
+    .resources-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .resources-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .resource-group {
+        border-bottom: 1px solid #f1f5f9;
+        padding-bottom: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .resource-group:last-child {
+        border-bottom: none;
+    }
+}
