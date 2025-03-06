@@ -61,10 +61,20 @@ The pharmacokinetic research employed PBPK modeling to characterize YCT-529's be
 - **[Research Paper PDF](pdfs/Final%20Research%20Capstone.pdf)**: Detailed pharmacokinetic modeling research
 - **[Executive Summary](pdfs/Capstone%20Project%20Executive%20Summary.pdf)**: Brief overview of the entire project
 - **[Research Appendices](pdfs/Research%20Appendices.pdf)**: Supplementary data and analysis
+- **[Review Appendices](https://drive.google.com/file/d/1dr4vd9vBuHmVWvFUjq8-IlXdgabZoJgy/view?usp=drive_link)**: Additional review materials and data
 
 ## Current Status
 
 YCT-529 is currently in Phase 1 clinical trials in London (NCT06094283), with Phase 1b/2a trials planned (NCT06542237). The drug represents a promising alternative to hormonal male contraception with potential for fewer side effects and complete reversibility.
+
+## Website Features
+
+The website includes several interactive elements to enhance user experience:
+
+- **Interactive Data Visualizations**: Explore pharmacokinetic data across different populations
+- **Detailed Methodology Flowchart**: Visual representation of the research approach
+- **Modal-Based Content**: In-depth information accessible through "View Details" buttons
+- **Responsive Design**: Optimized for all devices from desktop to mobile
 
 ## Running the Website Locally
 
