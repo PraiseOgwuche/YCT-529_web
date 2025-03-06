@@ -281,9 +281,10 @@ a:hover {
     display: flex;
     align-items: center;
     font-weight: 600;
-    font-size: 1.125rem;
+    font-size: 1.75rem;
     color: var(--dark);
 }
+
 
 .nav-links {
     display: flex;
