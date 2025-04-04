@@ -1,6 +1,7 @@
 # YCT-529: Advancing Male Contraception
 
 This repository contains the website for my capstone research project on YCT-529, a promising non-hormonal male contraceptive targeting retinoic acid receptor alpha (RARα).
+![Graphical Abstract - Capstone Literature Review (1)](https://github.com/user-attachments/assets/3a21dcf4-7a9b-44d3-9df9-281889b9d03f)
 
 ## Project Overview
 
