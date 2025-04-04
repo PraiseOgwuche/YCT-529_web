@@ -720,7 +720,7 @@
                                 <div class="finding-item green-card">
                                     <div class="finding-icon"><i class="fas fa-utensils"></i></div>
                                     <h4>Dietary Impact</h4>
-                                    <p>Fasting increased Cmax to ~100 μg/L, while high-fat meals reduced it to ~55 μg/L, suggesting food affects absorption kinetics.</p>
+                                    <p>Fasting increased C<sub>max</sub> to 45.85 μg/L, while high-fat meals reduced it to 28.32 μg/L, suggesting food significantly affects absorption kinetics.</p>
                                 </div>
                                 
                                 <div class="finding-item orange-card">
@@ -816,18 +816,18 @@
                 <div class="modal" id="dietary-modal">
                     <div class="modal-content">
                         <span class="close-button">&times;</span>
-                        <h2>Dietary Effects on Pharmacokinetics</h2>
+                        <h2>Dietary Effects on YCT-529 Pharmacokinetics</h2>
                         <div class="modal-body">
                             <div class="visualization-image">
-                                <img src="img/figures/dietary-effects.png" alt="Dietary Effects on Pharmacokinetics" class="modal-image">
+                                <img src="img/figures/significant-dietary-effects.png" alt="Effect of Dietary Condition on YCT-529 Cmax" class="modal-image">
                             </div>
                             
                             <h3>Key Observations</h3>
                             <ul class="observation-list">
-                                <li><strong>Fasting Condition:</strong> Highest peak concentration (Cmax ~100 μg/L) and more rapid absorption</li>
-                                <li><strong>High-Fat Meal:</strong> 45% reduction in Cmax (~55 μg/L) with delayed Tmax</li>
-                                <li><strong>Light Meal:</strong> Intermediate effect with ~25% reduction in peak concentration</li>
-                                <li><strong>AUC Differences:</strong> Total exposure (AUC) varied less dramatically than Cmax across conditions</li>
+                                <li><strong>Fasting:</strong> Significantly higher C<sub>max</sub> (mean: 45.85 μg/L), supported by large effect sizes compared to fed conditions (Cohen’s d = 1.38–1.61, p &lt; 0.001)</li>
+                                <li><strong>High-Fat Breakfast:</strong> Lower C<sub>max</sub> (28.32 μg/L), representing a ~61.9% decrease from fasting; large reduction confirmed statistically and practically</li>
+                                <li><strong>Light Meal:</strong> C<sub>max</sub> of 30.58 μg/L; not significantly different from high-fat meals (p = 0.842, d = 0.22)</li>
+                                <li><strong>Plasma Convergence:</strong> After 10 hours, plasma concentrations across all groups converge near 40 μg/L, indicating similar steady-state exposure</li>
                             </ul>
                             
                             <div class="key-finding-box">
@@ -835,11 +835,14 @@
                                     <i class="fas fa-lightbulb"></i>
                                     <h4>Clinical Implications</h4>
                                 </div>
-                                <p>Food significantly affects the rate and extent of YCT-529 absorption. For consistent drug exposure, administration timing relative to meals should be standardized. Morning administration in a fasting state may provide optimal and consistent drug levels.</p>
+                                <p>
+                                    These findings suggest that food intake has a significant impact on early YCT-529 absorption but less so on long-term exposure. To maximize C<sub>max</sub> and early systemic availability—critical during dose titration—administration in a fasted state is recommended. Clinical trials should standardize dietary conditions and stratify participants by meal state to optimize dosing accuracy.
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
+
 
                 <!-- Atazanavir Comparison Modal -->
                 <div class="modal" id="comparison-modal">
@@ -968,7 +971,7 @@
                         <div class="timeline-item right">
                             <div class="timeline-content">
                                 <h3>Dietary Considerations</h3>
-                                <p>Food intake affects YCT-529 absorption, with fasting increasing peak concentrations while high-fat meals reduce them, suggesting administration timing matters.</p>
+                                <p>Food intake affects YCT-529 systemic exposure, with fasting increasing peak concentrations while high-fat meals reduce them, suggesting administration timing matters.</p>
                             </div>
                         </div>
                         
